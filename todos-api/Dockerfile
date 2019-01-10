@@ -5,7 +5,9 @@ EXPOSE 8082
 WORKDIR /usr/src/app
 
 COPY package.json ./
-RUN npm install
+
+
+RUN npm audit fix --force && npm install
 
 COPY . .
 
