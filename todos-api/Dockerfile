@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY package.json ./
 
 
-RUN npm audit fix && npm install
+RUN npm install
 
 COPY . .
 
